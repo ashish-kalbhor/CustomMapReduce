@@ -1,0 +1,12 @@
+suffix="folder"
+for f in r*;
+do 
+	echo "Processing $f file..";
+	folder=$f$suffix
+	mkdir $folder
+	while read p;
+        do
+		mv final/$p $folder/.
+                
+        done < $f
+done
